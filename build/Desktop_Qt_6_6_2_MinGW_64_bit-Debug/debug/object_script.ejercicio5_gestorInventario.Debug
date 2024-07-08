@@ -1,4 +1,5 @@
 debug/main.o
+debug/logic_product.o
 debug/logic_user.o
 debug/product.o
 debug/productDAO.o

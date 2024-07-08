@@ -1,4 +1,5 @@
 release/main.o
+release/logic_product.o
 release/logic_user.o
 release/product.o
 release/productDAO.o

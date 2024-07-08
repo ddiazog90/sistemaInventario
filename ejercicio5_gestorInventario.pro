@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    sources/logic_product.cpp \
     sources/logic_user.cpp \
     sources/product.cpp \
     sources/productDAO.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     widget.cpp
 
 HEADERS += \
+    headers/logic_product.h \
     headers/logic_user.h \
     headers/product.h \
     headers/productDAO.h \

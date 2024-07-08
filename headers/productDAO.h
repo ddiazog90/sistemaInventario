@@ -3,6 +3,7 @@
 
 #include "headers/product.h"
 #include <fstream>
+#include <vector>
 class productDAO{
 private:
     product p;
@@ -13,6 +14,7 @@ public:
     ~productDAO();
     productDAO(const product&);
     void writeProducts();
+    vector<product> readProducts();
 };
 
 #endif // PRODUCTDAO_H
