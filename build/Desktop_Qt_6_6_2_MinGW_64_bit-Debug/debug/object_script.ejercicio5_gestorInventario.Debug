@@ -1,0 +1,12 @@
+debug/main.o
+debug/logic_user.o
+debug/product.o
+debug/productDAO.o
+debug/user.o
+debug/userDAO.o
+debug/home.o
+debug/registerproduct.o
+debug/widget.o
+debug/moc_home.o
+debug/moc_registerproduct.o
+debug/moc_widget.o

@@ -1,0 +1,12 @@
+release/main.o
+release/logic_user.o
+release/product.o
+release/productDAO.o
+release/user.o
+release/userDAO.o
+release/home.o
+release/registerproduct.o
+release/widget.o
+release/moc_home.o
+release/moc_registerproduct.o
+release/moc_widget.o
