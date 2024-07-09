@@ -40,14 +40,20 @@ struct qt_meta_stringdata_CLASSregisterProductENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSregisterProductENDCLASS = QtMocHelpers::stringData(
     "registerProduct",
     "saveProduct",
-    ""
+    "",
+    "prev",
+    "next",
+    "newProduct"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSregisterProductENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[12];
     char stringdata0[16];
     char stringdata1[12];
     char stringdata2[1];
+    char stringdata3[5];
+    char stringdata4[5];
+    char stringdata5[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSregisterProductENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -55,11 +61,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSregisterProductENDCLASS_t qt_me
     {
         QT_MOC_LITERAL(0, 15),  // "registerProduct"
         QT_MOC_LITERAL(16, 11),  // "saveProduct"
-        QT_MOC_LITERAL(28, 0)   // ""
+        QT_MOC_LITERAL(28, 0),  // ""
+        QT_MOC_LITERAL(29, 4),  // "prev"
+        QT_MOC_LITERAL(34, 4),  // "next"
+        QT_MOC_LITERAL(39, 10)   // "newProduct"
     },
     "registerProduct",
     "saveProduct",
-    ""
+    "",
+    "prev",
+    "next",
+    "newProduct"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -71,7 +83,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSregisterProductENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,9 +91,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSregisterProductENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   38,    2, 0x08,    1 /* Private */,
+       3,    0,   39,    2, 0x08,    2 /* Private */,
+       4,    0,   40,    2, 0x08,    3 /* Private */,
+       5,    0,   41,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -97,6 +115,12 @@ Q_CONSTINIT const QMetaObject registerProduct::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<registerProduct, std::true_type>,
         // method 'saveProduct'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'prev'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'next'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'newProduct'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -109,6 +133,9 @@ void registerProduct::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         (void)_t;
         switch (_id) {
         case 0: _t->saveProduct(); break;
+        case 1: _t->prev(); break;
+        case 2: _t->next(); break;
+        case 3: _t->newProduct(); break;
         default: ;
         }
     }
@@ -134,13 +161,13 @@ int registerProduct::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 4;
     }
     return _id;
 }

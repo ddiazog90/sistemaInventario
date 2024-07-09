@@ -34,16 +34,17 @@ public:
     QPushButton *btn_agregar;
     QHBoxLayout *horizontalLayout;
     QPushButton *btn_prev;
-    QPushButton *btn_agregar_;
+    QPushButton *btn_next;
+    QPushButton *btn_new;
 
     void setupUi(QWidget *registerProduct)
     {
         if (registerProduct->objectName().isEmpty())
             registerProduct->setObjectName("registerProduct");
-        registerProduct->resize(400, 206);
+        registerProduct->resize(400, 290);
         formLayoutWidget = new QWidget(registerProduct);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(20, 0, 361, 191));
+        formLayoutWidget->setGeometry(QRect(20, 0, 361, 270));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -104,14 +105,20 @@ public:
 
         horizontalLayout->addWidget(btn_prev);
 
-        btn_agregar_ = new QPushButton(formLayoutWidget);
-        btn_agregar_->setObjectName("btn_agregar_");
-        btn_agregar_->setFont(font);
+        btn_next = new QPushButton(formLayoutWidget);
+        btn_next->setObjectName("btn_next");
+        btn_next->setFont(font);
 
-        horizontalLayout->addWidget(btn_agregar_);
+        horizontalLayout->addWidget(btn_next);
 
 
         formLayout->setLayout(0, QFormLayout::FieldRole, horizontalLayout);
+
+        btn_new = new QPushButton(formLayoutWidget);
+        btn_new->setObjectName("btn_new");
+        btn_new->setFont(font);
+
+        formLayout->setWidget(5, QFormLayout::FieldRole, btn_new);
 
 
         retranslateUi(registerProduct);
@@ -127,7 +134,8 @@ public:
         label_3->setText(QCoreApplication::translate("registerProduct", "PRECIO:", nullptr));
         btn_agregar->setText(QCoreApplication::translate("registerProduct", "AGREGAR", nullptr));
         btn_prev->setText(QCoreApplication::translate("registerProduct", "<<", nullptr));
-        btn_agregar_->setText(QCoreApplication::translate("registerProduct", ">>", nullptr));
+        btn_next->setText(QCoreApplication::translate("registerProduct", ">>", nullptr));
+        btn_new->setText(QCoreApplication::translate("registerProduct", "NUEVO", nullptr));
     } // retranslateUi
 
 };

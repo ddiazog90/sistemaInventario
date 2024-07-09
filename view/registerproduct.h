@@ -21,10 +21,15 @@ private:
     logic_product lp,
                   *ptrLp=nullptr;
     void clearFields();
+    void loadFields(int);//cargar los campos del producto
+    int index=0;
 
 
 private slots:
     void saveProduct();
+    void prev();
+    void next();
+    void newProduct();
 };
 
 #endif // REGISTERPRODUCT_H

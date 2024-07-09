@@ -1,6 +1,8 @@
 #include "..//headers/productDAO.h"
+#include <iostream>
 #include <string>
 #include <sstream>
+#include <QDebug>
 using namespace std;
 
 vector<string> split(string str, char delimitador){
@@ -19,6 +21,7 @@ productDAO::productDAO(const product& p_){
     this->p=p_;
 }
 void productDAO::writeProducts(){
+
     archivo.open(path,ios::app);
     if(archivo.is_open()){
         archivo<<p.information()<<endl;
@@ -31,9 +34,11 @@ vector<product> productDAO::readProducts(){
     vector<product> products;
     vector<string> dataFile;//recupera el contenido del archivo
     archivo.open(path,ios::in);
+
     if(archivo.is_open()){
         string linea;
         while(getline(archivo,linea)){
+
             dataFile.push_back(linea);
         }
         archivo.close();
@@ -47,6 +52,7 @@ vector<product> productDAO::readProducts(){
         p.setPrice(stod(tokens[2]));//precio del producto
         products.push_back(p);//agregar los productos
     }
+
 
 
     return products;

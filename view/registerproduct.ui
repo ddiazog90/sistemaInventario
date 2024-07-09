@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>206</height>
+    <height>290</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>20</x>
      <y>0</y>
      <width>361</width>
-     <height>191</height>
+     <height>270</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -126,7 +126,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_agregar_">
+       <widget class="QPushButton" name="btn_next">
         <property name="font">
          <font>
           <family>Comic Sans MS</family>
@@ -140,6 +140,20 @@
        </widget>
       </item>
      </layout>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="btn_new">
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>NUEVO</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
